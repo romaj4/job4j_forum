@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class PostControl {
 
-    PostService postService;
+    private PostService postService;
 
     public PostControl(PostService postService) {
         this.postService = postService;
