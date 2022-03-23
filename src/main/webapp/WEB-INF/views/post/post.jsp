@@ -30,7 +30,7 @@
         <div class="col bg-light">
             <div class="m-2">
                 <p class="fs-4">${post.name}</p>
-                <p class="fs-5">${post.description}</p>
+                <p class="fs-6">${post.description}</p>
             </div>
         </div>
     </div>
