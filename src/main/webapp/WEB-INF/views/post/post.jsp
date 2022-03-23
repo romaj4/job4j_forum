@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -22,7 +23,7 @@
 <div class="container">
     <h3 class="m-3">${post.name}</h3>
     <div class="row" style="background-color: #eaecf2">
-        <span>${post.created}</span>
+        <span><fmt:formatDate type="both" dateStyle="short" timeStyle="short" value="${post.created}" /></span>
     </div>
     <div class="row mt-1">
         <div class="col-2 text-center fs-5 pt-2 me-1" style="background-color: #f2f6f8">User</div>

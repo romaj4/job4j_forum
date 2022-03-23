@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -34,7 +35,7 @@
         <c:forEach var="post" items="${posts}">
             <tr>
                 <td class="fw-bolder"><a class="link-dark" href="<c:url value='/post?id=${post.id}'/>">${post.name}</a></td>
-                <td>${post.created}</td>
+                <td><fmt:formatDate type="both" dateStyle="short" timeStyle="short" value="${post.created}" /></td>
                 <td class="text-center"><a class="btn btn-outline-secondary btn-sm" href="<c:url value='/post?id=${post.id}'/>">Перейти</a></td>
                 <td class="text-center"><a class="btn btn-outline-secondary btn-sm" href="<c:url value='/edit?id=${post.id}'/>">Редактировать</a></td>
             </tr>
