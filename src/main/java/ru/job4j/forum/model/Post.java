@@ -3,15 +3,23 @@ package ru.job4j.forum.model;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
+
 @Entity
 @Table(name = "posts")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String name;
+
     private String description;
+
     private Date created;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public static Post of(String name, String description) {
         Post post = new Post();
@@ -51,6 +59,14 @@ public class Post {
 
     public void setCreated(Date created) {
         this.created = created;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override

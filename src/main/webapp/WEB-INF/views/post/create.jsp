@@ -13,7 +13,7 @@
 <nav class="navbar" style="background-color: #99b19c">
     <div class="container">
         <span class="navbar-brand mb-0 fs-3">Welcome to our forum</span>
-        <a class="btn btn-outline-dark fs-6" href="<c:url value='/login'/>">Авторизация</a>
+        <a class="btn btn-outline-dark fs-6" href="<c:url value='/'/>">Главная</a>
     </div>
 </nav>
 <div class="container mt-5">

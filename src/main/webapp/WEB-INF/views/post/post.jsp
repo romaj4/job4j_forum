@@ -16,7 +16,6 @@
         <span class="navbar-brand mb-0 fs-3">Welcome to our forum</span>
         <ul class="nav justify-content-end">
             <a class="btn btn-outline-dark fs-6 me-4" href="<c:url value='/'/>">Главная</a>
-            <a class="btn btn-outline-dark fs-6" href="<c:url value='/login'/>">Авторизация</a>
         </ul>
     </div>
 </nav>
@@ -26,7 +25,7 @@
         <span><fmt:formatDate type="both" dateStyle="short" timeStyle="short" value="${post.created}" /></span>
     </div>
     <div class="row mt-1">
-        <div class="col-2 text-center fs-5 pt-2 me-1" style="background-color: #f2f6f8">User</div>
+        <div class="col-2 text-center align-middle fs-5 pt-3 me-1" style="background-color: #f2f6f8">${post.user.username}</div>
         <div class="col bg-light">
             <div class="m-2">
                 <p class="fs-4">${post.name}</p>

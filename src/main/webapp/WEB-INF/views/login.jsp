@@ -14,7 +14,6 @@
     <div class="container">
         <span class="navbar-brand mb-0 fs-3">Welcome to our forum</span>
         <ul class="nav justify-content-end">
-            <a class="btn btn-outline-dark fs-6 me-4" href="<c:url value='/'/>">Главная</a>
             <a class="btn btn-outline-dark fs-6" href="<c:url value='/reg'/>">Регистрация</a>
         </ul>
     </div>
@@ -30,8 +29,8 @@
         <form name='login' action="<c:url value='/login'/>" method='POST'>
             <table class="table table-borderless fs-5">
                 <tr>
-                    <td>Login:</td>
-                    <td><input type='text' name='login'></td>
+                    <td>UserName:</td>
+                    <td><input type='text' name='username'></td>
                 </tr>
                 <tr>
                     <td>Password:</td>

@@ -1,5 +1,7 @@
 package ru.job4j.forum.control;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +29,8 @@ public class PostControl {
 
     @PostMapping("/save")
     public String save(@ModelAttribute Post post, HttpServletRequest req) {
-        postService.create(post);
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        postService.create(post, auth.getName());
         return "redirect:/";
     }
 

@@ -15,8 +15,9 @@
     <div class="container">
         <span class="navbar-brand mb-0 fs-3">Welcome to our forum</span>
         <ul class="nav justify-content-end">
+            <span class="navbar-brand me-5 fs-5"><i class="bi bi-person"></i> ${user.username}</span>
             <a class="btn btn-outline-dark fs-6 me-4" href="<c:url value='/'/>">Главная</a>
-            <a class="btn btn-outline-dark fs-6" href="<c:url value='/login'/>">Авторизация</a>
+            <a class="btn btn-outline-dark fs-6" href="<c:url value='/logout'/>">Выйти</a>
         </ul>
     </div>
 </nav>
